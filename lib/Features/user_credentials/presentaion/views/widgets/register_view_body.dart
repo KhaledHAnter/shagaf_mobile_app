@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shagaf_mobile_app/Core/utils/assets.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/credentials_back_arrow.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/login_form.dart';
+import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/register_form.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class RegisterViewBody extends StatelessWidget {
+  const RegisterViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,11 @@ class LoginViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            const CerdentialsBackArrow(),
+            CerdentialsBackArrow(
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
+            ),
             const Gap(36),
             Image.asset(Assets.imagesLoginlogo),
             const Gap(32),
@@ -26,7 +32,7 @@ class LoginViewBody extends StatelessWidget {
               ),
               child: const Column(
                 children: <Widget>[
-                  LoginForm(),
+                  RegisterForm(),
                 ],
               ),
             ),
