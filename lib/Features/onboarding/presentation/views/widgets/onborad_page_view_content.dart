@@ -31,7 +31,6 @@ class OnboardPageViewContent extends StatelessWidget {
           onboardingData.description,
           style: Styles.regular16.copyWith(color: const Color(0xffFFC100)),
           textAlign: TextAlign.center,
-          maxLines: 3,
         ),
       ],
     );
