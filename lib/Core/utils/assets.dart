@@ -46,8 +46,8 @@ class Assets {
   static const String imagesSplashBackground = "assets/images/splashBackground.png";
 
   /// Assets for imagesSuccess
-  /// assets/images/success.png
-  static const String imagesSuccess = "assets/images/success.png";
+  /// assets/images/success.svg
+  static const String imagesSuccess = "assets/images/success.svg";
 
   /// Assets for imagesUsername
   /// assets/images/username.svg

@@ -3,10 +3,10 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shagaf_mobile_app/Core/utils/assets.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/credentials_back_arrow.dart';
-import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/register_form.dart';
+import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/forgot_password_form.dart';
 
-class RegisterViewBody extends StatelessWidget {
-  const RegisterViewBody({super.key});
+class ForgotPasswordViewBody extends StatelessWidget {
+  const ForgotPasswordViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class RegisterViewBody extends StatelessWidget {
               ),
               child: const Column(
                 children: <Widget>[
-                  RegisterForm(),
+                  ForgotPasswordForm(),
                 ],
               ),
             ),

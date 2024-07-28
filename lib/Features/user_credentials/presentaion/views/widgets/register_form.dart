@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shagaf_mobile_app/Core/utils/app_router.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/credentials_swap.dart';
-import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/forgot_password_button.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/form_item.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/login_button.dart';
 
@@ -18,7 +17,6 @@ class RegisterForm extends StatefulWidget {
 class _LoginFormState extends State<RegisterForm> {
   bool obscureText = true,
       reObscureText = true,
-      reminderMe = false,
       autoValidate = false,
       isLoading = false;
   String? phone, password, userName, confirmPassword;
@@ -139,7 +137,7 @@ class _LoginFormState extends State<RegisterForm> {
                 text1: "Already  have an account? ",
                 text2: "Log In",
                 onTap: () {
-                  GoRouter.of(context).push(AppRouter.kRegisterView);
+                  GoRouter.of(context).pop();
                 },
               )
             ],

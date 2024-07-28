@@ -3,10 +3,12 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shagaf_mobile_app/Core/utils/assets.dart';
 import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/credentials_back_arrow.dart';
-import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/register_form.dart';
+import 'package:shagaf_mobile_app/Features/user_credentials/presentaion/views/widgets/forgot_verfication_form.dart';
 
-class RegisterViewBody extends StatelessWidget {
-  const RegisterViewBody({super.key});
+class ForgotVerficationViewBody extends StatelessWidget {
+  const ForgotVerficationViewBody({super.key, required this.phone});
+
+  final String phone;
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +31,11 @@ class RegisterViewBody extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
                 color: const Color(0xffFBD57D).withOpacity(.5),
               ),
-              child: const Column(
+              child: Column(
                 children: <Widget>[
-                  RegisterForm(),
+                  ForgotVerificationForm(
+                    phone: phone,
+                  ),
                 ],
               ),
             ),

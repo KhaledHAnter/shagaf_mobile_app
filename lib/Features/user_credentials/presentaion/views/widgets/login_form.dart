@@ -81,7 +81,11 @@ class _LoginFormState extends State<LoginForm> {
                 prefixIcon: const Icon(Iconsax.lock_1),
               ),
               const Gap(6),
-              const ForgotPassButton(),
+              ForgotPassButton(
+                onPressed: () {
+                  GoRouter.of(context).push(AppRouter.kForgotPasswordView);
+                },
+              ),
               const Gap(22),
               LoginButton(
                 text: isLoading ? "Loading..." : "LOGIN",
@@ -95,7 +99,7 @@ class _LoginFormState extends State<LoginForm> {
                 text1: "Don't have an account? ",
                 text2: "Sign up",
                 onTap: () {
-                  GoRouter.of(context).pop();
+                  GoRouter.of(context).push(AppRouter.kRegisterView);
                 },
               )
             ],
